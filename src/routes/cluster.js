@@ -4,7 +4,7 @@ const router = Router();
 
 router.get('/', function(req,res){
   console.log("fonctionne");
-  res.send("geographique");
+  res.send("cluster");
 });
 
 export default router;

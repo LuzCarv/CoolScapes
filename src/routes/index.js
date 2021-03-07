@@ -1,9 +1,11 @@
-import session from './geographique';
-import user from './user';
-import message from './login';
+import geographique from './geographique';
+import catalogue from './catalogue';
+import login from './login';
+import cluster from './cluster';
 
 export default {
-  session,
-  user,
-  message,
+  geographique,
+  catalogue,
+  login,
+  cluster
 };

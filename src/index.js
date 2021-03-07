@@ -1,29 +1,22 @@
 import 'dotenv/config';
 import cors from 'cors';
 import express from 'express';
-
 import routes from './routes';
 
+const { pool } = require("./dbConfig");
+const bcrypt = require("bcrypt");
 const app = express();
 
-// * Application-Level Middleware * //
-
-// Third-Party Middleware
-
 app.use(cors());
-
-// Built-In Middleware
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// * Routes * //
 
-app.use('/session', routes.session);
-app.use('/users', routes.user);
-app.use('/messages', routes.message);
-
-// * Start * //
+app.use('/geographique', routes.geographique);
+app.use('/catalogue', routes.catalogue);
+app.use('/login', routes.login);
+app.use('/cluster', routes.cluster);
 
 app.listen(process.env.PORT, () =>
   console.log(`Example app listening on port ${process.env.PORT}!`),
