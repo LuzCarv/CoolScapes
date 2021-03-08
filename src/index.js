@@ -4,8 +4,8 @@ import express from 'express';
 import routes from './routes';
 
 const { pool } = require("./dbConfig");
-const bcrypt = require("bcrypt");
 const app = express();
+
 
 app.use(cors());
 
@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/geographique', routes.geographique);
 app.use('/catalogue', routes.catalogue);
-app.use('/login', routes.login);
+app.use('/user', routes.user);
 app.use('/cluster', routes.cluster);
 
 app.listen(process.env.PORT, () =>

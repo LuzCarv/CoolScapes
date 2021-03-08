@@ -1,11 +1,11 @@
 import geographique from './geographique';
 import catalogue from './catalogue';
-import login from './login';
+import user from './user';
 import cluster from './cluster';
 
 export default {
   geographique,
   catalogue,
-  login,
+  user,
   cluster
 };
